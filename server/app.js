@@ -6,7 +6,7 @@ const path = require("path");
 const mongoose = require("mongoose");
 const userRouter = require("./Routes/userRoute");
 require("dotenv").config();
-// const indexRouter = require('./routes/index');
+
 mongoose.connect(process.env.MONGO_CONNECTION_STRING);
 const app = express();
 var cors = require("cors");
