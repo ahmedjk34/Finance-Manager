@@ -9,6 +9,7 @@ import Wishlist from "./Components/Wishlist/Wishlist";
 import { Route, Routes } from "../node_modules/react-router-dom/dist/index";
 import { User } from "./Types";
 import axios from "../node_modules/axios/index";
+import "./App.css";
 
 type Props = {};
 
@@ -28,8 +29,9 @@ function App({}: Props) {
         username={user?.username}
         profilePicture={user?.profilePicture}
       ></Sidebar>
+      <div className="main-overlay"></div>
       <Routes>
-        <Route path="/" element={<Dashboard />}></Route>
+        <Route path="/" element={<Dashboard user={user} />}></Route>
         <Route path="/balance" element={<Balance />}></Route>
         <Route path="/cashflow" element={<Cashflow />}></Route>
         <Route path="/wishlist" element={<Wishlist />}></Route>
