@@ -7,23 +7,25 @@ type Props = {
 };
 
 function Sidebar({ username, profilePicture }: Props) {
-  console.log(username);
   return (
     <div className="sidebar">
-      <div className="profile"></div>
+      <div className="profile">
+        <img src={profilePicture}></img>
+        <h3>{username}</h3>
+      </div>
       <div className="options-list">
         <li className="option">
-          <BiHome className="icon" /> Dashboard
+          <BiHome className="icon" size="2.1rem" /> Dashboard
         </li>
         <li className="option">
-          <BiWallet className="icon" /> Balance
+          <BiWallet className="icon" size="2.1rem" /> Balance
         </li>
         <li className="option">
-          <BiPurchaseTagAlt className="icon" />
+          <BiPurchaseTagAlt className="icon" size="2.1rem" />
           Cashflow
         </li>
         <li className="option">
-          <BiHeart className="icon" />
+          <BiHeart className="icon" size="2.1rem" />
           Wishlist
         </li>
       </div>
