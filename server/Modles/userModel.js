@@ -60,12 +60,55 @@ const userSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  spendingList: {
-    type: Object,
+  incomeList: {
+    type: [Object],
   },
   expensesList: {
-    type: Object,
+    type: [Object],
   },
 });
 
 module.exports = mongoose.model("user", userSchema);
+
+//user example :
+
+// const m = mongoose.model("user", userSchema);
+// const username = "Ahmedgh";
+// const password = "123456789";
+// const mainCurrency = {
+//   name: "US Dollar",
+//   symbol: "$",
+// };
+// const balance = 1250;
+// const wishList = {};
+// const incomeGoal = 4000;
+// const currentIncome = 3000;
+// const expensesGoal = 2000;
+// const currentExpenses = 1750;
+// const incomeList = [
+//   { amount: 41.0, category: "Salary", date: "25/6/2023" },
+//   { amount: 12.94, category: "Allowance", date: "25/6/2023" },
+//   { amount: 132.0, category: "Business", date: "23/6/2023" },
+//   { amount: 412.0, category: "Salary", date: "22/6/2023" },
+// ];
+// const expensesList = [
+//   { amount: 24.0, category: "Stocks", date: "21/6/2023" },
+//   { amount: 123.5, category: "Clothes", date: "19/6/2023" },
+//   { amount: 500.0, category: "Business", date: "19/6/2023" },
+//   { amount: 30.0, category: "food", date: "18/6/2023" },
+//   { amount: 42.5, category: "food", date: "20/6/2023" },
+// ];
+// m.create({
+//   username: username,
+//   password: password,
+//   mainCurrency: mainCurrency,
+//   balance: balance,
+//   wishList: wishList,
+
+//   incomeGoal: incomeGoal,
+//   currentIncome: currentIncome,
+//   expensesGoal: expensesGoal,
+//   currentExpenses: currentExpenses,
+//   incomeList: incomeList,
+//   expensesList: expensesList,
+// });
