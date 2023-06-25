@@ -18,3 +18,23 @@ exports.fetchBalance = async function (req, res) {
     console.log(error);
   }
 };
+exports.fetchIncome = async function (req, res) {
+  try {
+    const incomeInfo = await userModel
+      .find({})
+      .select("incomeGoal currentIncome incomeList");
+    res.json(incomeInfo);
+  } catch (error) {
+    console.log(error);
+  }
+};
+exports.fetchExpenses = async function (req, res) {
+  try {
+    const expensesInfo = await userModel
+      .find({})
+      .select("expensesGoal currentExpenses expensesList");
+    res.json(expensesInfo);
+  } catch (error) {
+    console.log(error);
+  }
+};

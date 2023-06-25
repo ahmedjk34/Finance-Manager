@@ -81,10 +81,10 @@ module.exports = mongoose.model("user", userSchema);
 // };
 // const balance = 1250;
 // const wishList = {};
-// const incomeGoal = 4000;
-// const currentIncome = 3000;
-// const expensesGoal = 2000;
-// const currentExpenses = 1750;
+// const incomeGoal = 4000.0;
+// const currentIncome = 3000.0;
+// const expensesGoal = 2000.0;
+// const currentExpenses = 1750.0;
 // const incomeList = [
 //   { amount: 41.0, category: "Salary", date: "25/6/2023" },
 //   { amount: 12.94, category: "Allowance", date: "25/6/2023" },
@@ -104,7 +104,6 @@ module.exports = mongoose.model("user", userSchema);
 //   mainCurrency: mainCurrency,
 //   balance: balance,
 //   wishList: wishList,
-
 //   incomeGoal: incomeGoal,
 //   currentIncome: currentIncome,
 //   expensesGoal: expensesGoal,
