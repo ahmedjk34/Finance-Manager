@@ -6,8 +6,6 @@ import Cashflow from "./Cashflow";
 type Props = {};
 
 function Dashboard() {
-  //@ts-ignore
-
   return (
     <div className="dashboard">
       <h1 className="section-title">Dashboard</h1>
