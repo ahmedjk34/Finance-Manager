@@ -1,12 +1,17 @@
-export interface currency {
+export interface Currency {
   name: String;
   symbol: String;
+}
+export interface List {
+  amount: number;
+  category: String;
+  date: Date;
 }
 export interface User {
   username: String;
   password: String;
   profilePicture: String;
-  mainCurrency: currency;
+  mainCurrency: Currency;
   balance: Number;
   wishList: Object;
   incomeCatagories: [String];
@@ -15,6 +20,6 @@ export interface User {
   currentIncome: Number;
   currentExpenses: Number;
   expensesGoal: Number;
-  spendingList: Object;
-  expensesList: Object;
+  spendingList: List;
+  expensesList: List;
 }
