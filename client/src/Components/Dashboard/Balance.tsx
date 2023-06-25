@@ -1,17 +1,18 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { currencyContext } from "../../App";
 
 type Props = {};
 
 function Balance() {
   const [balance, setBalance] = useState<Number>(0);
-  const [symbol, setSymbol] = useState<String>("$");
+  const symbol = useContext(currencyContext)?.symbol;
+
   useEffect(() => {
     axios
       .get("http://localhost:3000/user/balance")
       .then((response) => {
         setBalance(response.data[0].balance);
-        setSymbol(response.data[0].mainCurrency.symbol);
       })
       .catch((e) => console.log(e));
   }, []);
@@ -20,7 +21,8 @@ function Balance() {
       <h3>Balance</h3>
       <div className="balance">
         <h1>
-          {balance}.00{symbol}
+          {balance.toFixed(2)}
+          {symbol}
         </h1>
 
         <h4>More Info &gt;</h4>
