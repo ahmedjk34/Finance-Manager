@@ -9,7 +9,7 @@ export interface CashflowList {
 }
 export interface WishList {
   item: String;
-  Link: String;
+  link: String;
   price: Number;
   dateAdded: String;
 }

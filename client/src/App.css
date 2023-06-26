@@ -181,13 +181,41 @@ font-family: 'Signika', sans-serif;
   border-radius: 1.5rem;
   padding: 1.5rem;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
-.dashboard .wishlist-info {
+.dashboard .wishlist-info > h4 {
+  color: rgba(255, 255, 255, 0.6);
+}
+/*to center the arrow icon*/
+.dashboard .link-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+/*these will be used to align the text properly , all starting from the same line*/
+.dashboard .wishlist-info,
+.dashboard .list-item {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  text-align: center;
 }
-.dashboard .wishlist-info > h5 {
-  color: rgba(255, 255, 255, 0.6);
-  font-family: "Raleway", sans-serif;
+
+.dashboard .wishlist-info > *,
+.dashboard .list-item > * {
+  flex: 1;
+  font-family: "Signika", sans-serif;
+  font-weight: 300;
+}
+.dashboard .wishlist-info > *:first-child,
+.dashboard .list-item > *:first-child {
+  text-align: left;
+  margin-left: 1rem;
+}
+.dashboard .wishlist-info > *:last-child,
+.dashboard .list-item > *:last-child {
+  text-align: right;
+  margin-right: 1rem;
 }
