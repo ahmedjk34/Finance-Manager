@@ -29,7 +29,7 @@ function Cashflow({}: Props) {
         <div className="income">
           <h4>Income</h4>
           {incomeList?.slice(0, 4).map((item, index) => (
-            <div className="cashflow-details" key={index}>
+            <div className="cashflow-details" key={"income" + index}>
               <h1>
                 {item.amount.toFixed(2)}
                 {symbol}
@@ -49,9 +49,29 @@ function Cashflow({}: Props) {
         </div>
         <div className="expenses">
           <h4>Expenses</h4>
-          {expensesList?.slice(0, 4).map((item, index) => (
-            <div className="cashflow-details" key={index}></div>
-          ))}
+          <div>
+            <div>
+              {incomeList?.slice(0, 4).map((item, index) => (
+                <div className="cashflow-details" key={"income" + index}>
+                  <h1>
+                    {item.amount.toFixed(2)}
+                    {symbol}
+                  </h1>
+                  <div>
+                    <h3>
+                      <BiMoney />
+                      {item.category}
+                    </h3>
+                    <h3>
+                      <BiCalendarAlt />
+                      {item.date}
+                    </h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>

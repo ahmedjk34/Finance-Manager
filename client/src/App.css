@@ -81,7 +81,7 @@ font-family: 'Signika', sans-serif;
 .dashboard .main-content {
   height: calc(100% - 1rem);
   display: grid;
-  grid-template: 1fr 1fr 0.5fr / 1fr 1fr;
+  grid-template: 0.8fr 1fr 0.5fr / 1fr 1fr;
   font-family: "Signika", sans-serif;
 }
 /*this is to align the title with the content div*/
@@ -134,12 +134,21 @@ font-family: 'Signika', sans-serif;
   flex-direction: column;
   gap: 1rem;
 }
-
+/*this is the div in expenses , that is used to separate into info & graph*/
+.dashboard .expenses > div {
+  display: grid;
+  grid-template: 1fr / 2fr 1.5fr;
+}
+/*this is the div used in expenses info , added this style to add a similar gap*/
+.dashboard .expenses > div > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .cashflow-details {
   display: grid;
   border: 3px solid var(--sec-color);
   grid-template: 1fr / 2fr 1fr;
-  height: 100%;
   /*? should i remove this*/
   padding: 0.5rem;
 }
