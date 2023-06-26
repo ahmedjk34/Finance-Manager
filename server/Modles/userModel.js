@@ -95,8 +95,8 @@ module.exports = mongoose.model("user", userSchema);
 //   { amount: 24.0, category: "Stocks", date: "21/6/2023" },
 //   { amount: 123.5, category: "Clothes", date: "19/6/2023" },
 //   { amount: 500.0, category: "Business", date: "19/6/2023" },
-//   { amount: 30.0, category: "food", date: "18/6/2023" },
-//   { amount: 42.5, category: "food", date: "20/6/2023" },
+//   { amount: 30.0, category: "Food", date: "18/6/2023" },
+//   { amount: 42.5, category: "Food", date: "20/6/2023" },
 // ];
 // m.create({
 //   username: username,
