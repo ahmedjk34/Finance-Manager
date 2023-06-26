@@ -46,3 +46,24 @@ exports.fetchWishList = async function (req, res) {
     console.log(error);
   }
 };
+exports.fetchExpensesGraphData = async function (req, res) {
+  try {
+    const expensesInfo = await userModel.find({}).select("expensesList");
+    const expensesList = expensesInfo[0].expensesList;
+    const graphData = {};
+    //run through each element in the expenses list -> categories :
+    //if it doesn't exist , create a new property in the object , default value of 1 ,
+    // if it does , change the value to => prev + 1
+    expensesList.forEach((item) => {
+      if (`${item.category}` in graphData) {
+        graphData[`${item.category}`] = graphData[`${item.category}`] + 1;
+      } else {
+        graphData[`${item.category}`] = 1;
+      }
+      console.log(graphData);
+    });
+    res.json(graphData);
+  } catch (error) {
+    console.log(error);
+  }
+};
