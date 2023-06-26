@@ -1,5 +1,5 @@
 import axios from "axios";
-import { List } from "../../Types";
+import { CashflowList } from "../../Types";
 import { BiMoney, BiCalendarAlt } from "react-icons/bi";
 
 import React, { useContext, useEffect, useState } from "react";
@@ -8,8 +8,8 @@ import { currencyContext } from "../../App";
 type Props = {};
 
 function Cashflow({}: Props) {
-  const [incomeList, setIncomeList] = useState<[List] | null>(null);
-  const [expensesList, setExpensesList] = useState<[List] | null>(null);
+  const [incomeList, setIncomeList] = useState<[CashflowList] | null>(null);
+  const [expensesList, setExpensesList] = useState<[CashflowList] | null>(null);
   const symbol = useContext(currencyContext)?.symbol;
   useEffect(() => {
     axios
