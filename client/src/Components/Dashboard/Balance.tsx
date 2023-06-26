@@ -18,7 +18,7 @@ function Balance() {
   }, []);
   return (
     <div>
-      <h3>Balance</h3>
+      <h3 className="section-title">Balance</h3>
       <div className="balance">
         <h1>
           {balance.toFixed(2)}

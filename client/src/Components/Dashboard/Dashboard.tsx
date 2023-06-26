@@ -2,6 +2,7 @@ import React from "react";
 import { User } from "../../Types";
 import Balance from "./Balance";
 import Cashflow from "./Cashflow";
+import Wishlist from "./Wishlist";
 
 type Props = {};
 
@@ -13,7 +14,7 @@ function Dashboard() {
         <Balance />
         <div className="calendar"></div>
         <Cashflow></Cashflow>
-        <div className="wishlist"></div>
+        <Wishlist />
       </div>
     </div>
   );

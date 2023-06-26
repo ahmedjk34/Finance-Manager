@@ -24,7 +24,7 @@ function Cashflow({}: Props) {
 
   return (
     <div className="cashflow-container">
-      <h3>Cashflow</h3>
+      <h3 className="section-title">Cashflow</h3>
       <div className="cashflow">
         <div className="income">
           <h4>Income</h4>
@@ -51,8 +51,8 @@ function Cashflow({}: Props) {
           <h4>Expenses</h4>
           <div>
             <div>
-              {incomeList?.slice(0, 4).map((item, index) => (
-                <div className="cashflow-details" key={"income" + index}>
+              {expensesList?.slice(0, 4).map((item, index) => (
+                <div className="cashflow-details" key={"expenses" + index}>
                   <h1>
                     {item.amount.toFixed(2)}
                     {symbol}
