@@ -38,3 +38,11 @@ exports.fetchExpenses = async function (req, res) {
     console.log(error);
   }
 };
+exports.fetchWishList = async function (req, res) {
+  try {
+    const wishList = await userModel.find({}).select("wishList");
+    res.json(wishList);
+  } catch (error) {
+    console.log(error);
+  }
+};
