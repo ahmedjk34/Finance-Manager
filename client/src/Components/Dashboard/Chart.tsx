@@ -6,8 +6,9 @@ import { Doughnut, Pie } from "react-chartjs-2";
 type Props = {};
 
 function Chart({}: Props) {
-  const [labels, setLabels] = useState(null);
+  const [labels, setLabels] = useState(undefined);
   const [reoccurrence, setReoccurrence] = useState(null);
+
   useEffect(() => {
     axios
       .get("http://localhost:3000/user/expenses/graphData")

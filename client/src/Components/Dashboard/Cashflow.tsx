@@ -41,8 +41,10 @@ function Cashflow({}: Props) {
                   {item.category}
                 </h3>
                 <h3>
-                  <BiCalendarAlt />
-                  {item.date}
+                  <>
+                    <BiCalendarAlt />
+                    {item.date}
+                  </>
                 </h3>
               </div>
             </div>
@@ -64,8 +66,10 @@ function Cashflow({}: Props) {
                       {item.category}
                     </h3>
                     <h3>
-                      <BiCalendarAlt />
-                      {item.date}
+                      <>
+                        <BiCalendarAlt />
+                        {item.date}
+                      </>
                     </h3>
                   </div>
                 </div>
