@@ -4,6 +4,7 @@ import { BiMoney, BiCalendarAlt } from "react-icons/bi";
 
 import React, { useContext, useEffect, useState } from "react";
 import { currencyContext } from "../../App";
+import Chart from "./Chart";
 
 type Props = {};
 
@@ -70,7 +71,7 @@ function Cashflow({}: Props) {
                 </div>
               ))}
             </div>
-            <div></div>
+            <Chart />
           </div>
         </div>
       </div>
