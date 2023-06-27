@@ -26,7 +26,7 @@ font-family: 'Signika', sans-serif;
   background-position: center;
   position: relative;
   min-height: 115vh;
-  z-index: -1;
+  z-index: 1;
   display: flex;
 }
 .main-overlay {
@@ -107,6 +107,8 @@ font-family: 'Signika', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 .dashboard .balance h1 {
   border-bottom: 4px solid var(--sec-color);
@@ -120,6 +122,12 @@ font-family: 'Signika', sans-serif;
   right: 2.5rem;
   color: var(--sec-color);
   font-weight: 300;
+  transition: all linear 0.25s;
+}
+.dashboard .balance h4:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.03);
 }
 .dashboard .cashflow {
   display: grid;
