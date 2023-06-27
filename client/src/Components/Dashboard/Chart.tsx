@@ -18,7 +18,6 @@ function Chart({}: Props) {
       })
       .catch((e) => console.log(e));
   }, []);
-  console.log(labels, reoccurrence);
   return (
     <div className="chart-container">
       <Pie
