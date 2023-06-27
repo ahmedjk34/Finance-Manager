@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 ChartJS.register(ArcElement, Tooltip, Legend);
-import { Pie } from "react-chartjs-2";
+import { Doughnut, Pie } from "react-chartjs-2";
 type Props = {};
 
 function Chart({}: Props) {
@@ -19,7 +19,7 @@ function Chart({}: Props) {
   }, []);
   console.log(labels, reoccurrence);
   return (
-    <div>
+    <div className="chart-container">
       <Pie
         data={{
           labels: labels,
@@ -30,7 +30,9 @@ function Chart({}: Props) {
             },
           ],
         }}
-        options={[]}
+        options={{
+          responsive: true,
+        }}
       ></Pie>
     </div>
   );

@@ -176,6 +176,14 @@ font-family: 'Signika', sans-serif;
   gap: 0.5rem;
   width: 100%;
 }
+.dashboard .chart-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 99%;
+  width: 20vw;
+  margin: auto;
+}
 .dashboard .wishlist {
   background-color: var(--bgc1);
   border-radius: 1.5rem;
