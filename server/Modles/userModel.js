@@ -50,6 +50,10 @@ const userSchema = new mongoose.Schema({
       "Games",
     ],
   },
+  monthlyGoal: {
+    type: Number,
+    required: true,
+  },
   incomeGoal: {
     type: Number,
     required: true,
@@ -68,9 +72,7 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("user", userSchema);
-
-//user example :
+// module.exports = mongoose.model("user", userSchema);
 
 // const m = mongoose.model("user", userSchema);
 // const username = "Ahmedgh";
@@ -80,6 +82,7 @@ module.exports = mongoose.model("user", userSchema);
 //   symbol: "$",
 // };
 // const balance = 1250;
+// const monthlyGoal = 2500;
 // const incomeGoal = 4000.0;
 // const currentIncome = 3000.0;
 // const expensesGoal = 2000.0;
@@ -129,6 +132,7 @@ module.exports = mongoose.model("user", userSchema);
 //   mainCurrency: mainCurrency,
 //   balance: balance,
 //   wishList: wishList,
+//   monthlyGoal: monthlyGoal,
 //   incomeGoal: incomeGoal,
 //   currentIncome: currentIncome,
 //   expensesGoal: expensesGoal,
