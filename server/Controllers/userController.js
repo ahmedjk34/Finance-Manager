@@ -67,3 +67,15 @@ exports.fetchExpensesGraphData = async function (req, res) {
     console.log(error);
   }
 };
+exports.fetchMonthlyGoal = async function (req, res) {
+  try {
+    const monthlyGoalInfo = await userModel
+      .find({})
+      .select(
+        "monthlyGoal expensesGoal currentExpenses incomeGoal currentIncome"
+      );
+    res.json(monthlyGoalInfo);
+  } catch (error) {
+    console.log(error);
+  }
+};
