@@ -27,7 +27,9 @@ function Balance() {
           {symbol}
         </h1>
 
-        <h4 onClick={() => navigation("/balance")}>More Info &gt;</h4>
+        <h4 onClick={() => navigation("/balance")} className="sub-text">
+          More Info &gt;
+        </h4>
       </div>
     </div>
   );
